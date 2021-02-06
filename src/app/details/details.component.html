@@ -1,0 +1,49 @@
+<h1><i><b>CONTACT US</b></i></h1>
+<div class=" background-image">
+<div class="container">
+    <div class="jumbotron">
+        <form [formGroup]= "details" (ngSubmit)="detail()">
+            <div class="form-group">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input formControlName="name" name="name" type="text" class="form-control" id="user">
+                    <div *ngIf= "details.get('name')?.touched && details.get('name')?.errors">
+                        <label *ngIf= "details.get('name')?.errors?.required"> Invalid</label>
+                        <label *ngIf= "details.get('name')?.errors?.pattern"> Not In Correct Format</label><br>
+                       
+                    </div>
+
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input formControlName="email" name="email" type="text" class="form-control" id="email">
+                    <div *ngIf= "details.get('email')?.touched && details.get('email')?.errors">
+                        <label *ngIf= "details.get('email')?.errors?.required"> Invalid</label>
+                        <label *ngIf= "details.get('email')?.errors?.email" >Invalid Email </label>
+                        <label *ngIf= "details.get('email')?.errors?.pattern"> Not In Correct Format</label><br>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input formControlName="phone" name="phone" type="text" class="form-control" id="Phone">
+                    <div *ngIf= "details.get('phone')?.touched && details.get('phone')?.errors">
+                        <label *ngIf= "details.get('phone')?.errors?.required"> Invalid </label>
+                        <label *ngIf= "details.get('phone')?.errors?.pattern"> Not In Correct Format</label><br>
+                    </div>
+                </div>
+                <div class="form-floating">
+                    <label for="floatingTextarea2">Message</label>
+                    <textarea formControlName="message" class="form-control" placeholder="Leave a comment here"
+                        id="floatingTextarea2" name="Message" style="height: 100px"></textarea>
+                    <label *ngIf= "details.get('message')?.touched && details.get('message')?.errors">Please type any
+                        message</label>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">Submit</button> <br>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>

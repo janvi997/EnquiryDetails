@@ -1,0 +1,16 @@
+<div class="bg">
+<table border="1 " align="center">
+    <tr>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Phone Number</td>
+        <td>Message</td>
+    </tr>
+   <tr *ngFor ="let item of listing">
+       <td>{{item.name}}</td>
+       <td>{{item.email}}</td>
+       <td>{{item.phone}}</td>
+       <td>{{item.message}}</td>
+   </tr>
+</table>
+</div>

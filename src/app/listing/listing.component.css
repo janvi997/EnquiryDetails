@@ -1,0 +1,11 @@
+table{
+    align-content: center;
+    margin-top: 10%;
+   font-weight: bolder;
+   color: snow;
+}
+.bg{
+    background: url("/assets/Contact-Us.jpg");
+     
+    background-repeat: no-repeat;
+}
